@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multimedia - HTML 5</title>
+    </head>
+    <body>
+        <h2>Multimedia Video - HTML 5</h2>
+        <p>
+            <button onclick="playVid()" type="button">play video</button>
+            <button onclick="pauseVid()" type="button">pause video</button>
+            <button onclick="durationVid()" type="button">Duration Video</button>
+            <button onclick="ControlsOn()" type="button">Controls On</button>
+            <button onclick="ControlsOff()" type="button">Controls Off</button>
+            <button onclick="LoopStatus()" type="button">Loop Status</button>
+            <button onclick="LoopOn()" type="button">Loop On</button>
+            <button onclick="LoopOff()" type="button">Loop Off</button>
+
+        </p>
+        <video id="myVideo" width="780">
+            <source type="video/mp4" src="media/movie.mp4">
+    
+        </video>
+    </body>
+    <script>  
+     var vid = document.getElementById("myVideo");
+    var     
+    function playVid() {
+        vid.play();
+    }
+    function pauseVid() {
+        vid.pause();
+    } 
+    function durationVid() {
+       alert(vid.duration);
+    }
+    function ControlsOn() {
+        vid.ControlsOn = true;
+        vid.load();
+    }
+    function ControlsOff() {
+        vid.controls = false;
+        vid.load ();
+    }
+    function LoopStatus() {
+        alert(vid.loop);
+    }
+    function LoopOn() {
+        vid.loop = true;
+        vid.load();
+    }
+    function LoopOff() {
+        vid.loop = false;
+        vid.load();
+    }
+
+    </script>
+ 
+</html>    
+   
